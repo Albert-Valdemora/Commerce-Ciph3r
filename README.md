@@ -1,39 +1,45 @@
-# Commerce-Ciph3r
+# **Commerce CIPH3R**
 
-This template should help get you started developing with Vue 3 in Vite.
+**Commerce CIPH3R** es una aplicación web de comercio electrónico desarrollada utilizando **Vue 3** y **Pinia** para gestionar el estado de los productos y usuarios. Esta aplicación consume una API de tienda en línea para mostrar productos organizados por categorías y permite a los usuarios registrarse, iniciar sesión y realizar búsquedas de productos.
 
-## Recommended IDE Setup
+## **Tecnologías Utilizadas**
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- **Vue 3**: Framework JavaScript para el desarrollo de la interfaz de usuario utilizando la Composition API.
+- **Pinia**: Manejo del estado global para gestionar los datos del usuario y productos.
+- **Vue Router**: Para la navegación entre páginas.
+- **Vite**: Herramienta de construcción para un desarrollo rápido y eficiente.
+- **TypeScript**: Para garantizar la calidad y robustez del código.
+- **TailwindCSS**: Framework CSS para un diseño limpio y responsivo.
 
-## Type Support for `.vue` Imports in TS
+## **Características**
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+- **Consumo de API**: La aplicación consume los siguientes endpoints de la API de la tienda en línea:
+  - **Productos**: Muestra una lista de productos con sus respectivas categorías.
+  - **Categorías**: Permite filtrar productos por categorías.
+  - **Login y Registro**: Funcionalidad para registrar nuevos usuarios e iniciar sesión.
+- **Búsqueda y Filtro de Productos**: Los usuarios pueden buscar productos por nombre o categoría.
+- **Agregar al Carrito**: Los usuarios pueden agregar productos al carrito (funcionalidad pendiente de implementación).
+- **Responsividad**: La aplicación está diseñada para adaptarse a diferentes tamaños de pantalla.
 
-## Customize configuration
+## **Instalación**
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+Sigue estos pasos para instalar y ejecutar el proyecto en tu máquina local.
 
-## Project Setup
+### **Clonar el repositorio**
 
-```sh
+```bash
+git clone https://github.com/Albert-Valdemora/Commerce-Ciph3r.git
+```
+
+### **Instalar dependencias**
+
+```bash
+cd commerce-ciph3r
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### **Ejecutar la aplicación en desarrollo**
 
-```sh
+```bash
 npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
 ```
