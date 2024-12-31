@@ -1,3 +1,10 @@
+<!-- /**
+ * Maneja el proceso de inicio de sesión.
+ * Envía los datos del usuario (email y contraseña) a la API para autenticar al usuario.
+ * Si la autenticación es exitosa, guarda el token y la información del usuario en el store.
+ * Luego, redirige al usuario al dashboard.
+ */ -->
+
 <script setup lang="ts">
 import { ref } from 'vue';
 import { useUserStore } from '../stores/userStore';
@@ -84,5 +91,3 @@ const handleLogin = async () => {
     </div>
   </div>
 </template>
-
-<style scoped></style>

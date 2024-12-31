@@ -1,3 +1,18 @@
+<!-- /**
+ * Componente principal que maneja la visualización de productos y categorías en una tienda.
+ * Realiza las siguientes funciones:
+ * 1. Obtiene las categorías y productos desde la API al montar el componente utilizando las funciones fetchCategories y fetchProductos.
+ * 2. Permite filtrar los productos por categoría seleccionada.
+ * 3. Muestra los productos filtrados o todos los productos si no se ha seleccionado una categoría.
+ * 4. Muestra botones para seleccionar o deseleccionar categorías, aplicando estilos dinámicos.
+ * 5. Muestra un mensaje de carga si las categorías o productos aún no están disponibles.
+ * 6. Si no hay productos en la categoría seleccionada, muestra un mensaje indicando que no hay productos en esa categoría.
+ *
+ * Dependencias:
+ * - useUserStore: para acceder al token del usuario y autorizar las peticiones a la API.
+ * - ProductCard: componente que representa cada producto individualmente.
+ */ -->
+
 <script lang="ts" setup>
 import { ref, computed, onMounted } from 'vue';
 import ProductCard from './ProductCard.vue';

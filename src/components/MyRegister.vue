@@ -1,3 +1,10 @@
+<!-- /**
+ * Maneja el proceso de regisro de usuario.
+ * Envía los datos del usuario (name, correo y contraseña) a la API para registrar al usuario.
+ * Si el registro es exitosa, guarda el token y la información del usuario en el store.
+ * Luego, redirige al usuario al dashboard.
+ */ -->
+
 <script setup lang="ts">
 import { ref } from 'vue';
 import { RouterLink } from 'vue-router';
@@ -104,5 +111,3 @@ const handleLogin = async () => {
     </div>
   </div>
 </template>
-
-<style scoped></style>
