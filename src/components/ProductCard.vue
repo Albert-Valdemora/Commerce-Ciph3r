@@ -24,7 +24,7 @@ defineProps<{ product: Product }>();
   >
     <img
       :src="
-        product.image == udenfined
+        product.image == undefined
           ? 'https://api.takeit.ciph3r.co/img/placepic.jpg'
           : `${product.image.url}`
       "
