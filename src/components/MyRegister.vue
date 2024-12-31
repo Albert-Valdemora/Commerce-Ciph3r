@@ -63,7 +63,7 @@ const handleLogin = async () => {
 </script>
 
 <template>
-  <div class="w-96 p-7 custom-shadow rounded-lg bg-gray-800">
+  <div class="p-7 custom-shadow rounded-lg bg-gray-800">
     <h2 class="text-3xl text-center mb-3 font-extrabold">Registro</h2>
     <p class="text-center text-md font-medium">Ingresa tus datos para crear a tu cuenta</p>
 

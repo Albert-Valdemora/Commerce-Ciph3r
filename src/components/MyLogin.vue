@@ -58,7 +58,7 @@ const handleLogin = async () => {
 </script>
 
 <template>
-  <div class="w-96 p-7 custom-shadow rounded-lg bg-gray-800">
+  <div class="p-7 custom-shadow rounded-lg bg-gray-800">
     <h2 class="text-3xl text-center mb-3 font-extrabold">Login</h2>
     <p class="text-center text-md font-medium">Ingresa tus credenciales para acceder a tu cuenta</p>
 
@@ -77,7 +77,7 @@ const handleLogin = async () => {
           v-model="password"
           placeholder="Password"
           label="Password"
-          :type="isVisible ? 'text' : 'password'"
+          type="password"
         />
 
         <Button radius="sm" class="w-full h-11 font-bold mb-5 bg-blue-600" type="submit">
