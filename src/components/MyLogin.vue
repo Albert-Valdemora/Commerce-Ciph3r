@@ -5,17 +5,18 @@ import { useRouter } from 'vue-router';
 
 const email = ref('');
 const password = ref('');
-const isVisible = ref(false);
 
 const userStore = useUserStore();
 const router = useRouter();
 
 const handleLogin = async () => {
   try {
+    //Aqui capturamos los datos ingresados por el usuario
     const body = new URLSearchParams();
     body.append('email', email.value);
     body.append('password', password.value);
 
+    //Aqui hacemos el envio a la api
     const response = await fetch('https://api.takeit.ciph3r.co/api/v1/login', {
       method: 'POST',
       headers: {
@@ -24,6 +25,7 @@ const handleLogin = async () => {
       body: body.toString(),
     });
 
+    //Verificamos que la repuesta de la api sea exitosa
     if (!response.ok) {
       const errorData = await response.json();
       throw new Error(errorData.message || 'Error en el login');
@@ -32,6 +34,7 @@ const handleLogin = async () => {
     const data = await response.json();
     const { token, email: emailRes, name, user } = data.data;
 
+    //Actualizamos el Store del usuario
     userStore.setUser({
       id: user.uuid,
       name: name,
@@ -82,6 +85,4 @@ const handleLogin = async () => {
   </div>
 </template>
 
-<style scoped>
-/* Aquí puedes agregar tu estilo */
-</style>
+<style scoped></style>

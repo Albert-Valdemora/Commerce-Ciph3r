@@ -14,12 +14,14 @@ const router = useRouter();
 
 const handleLogin = async () => {
   try {
+    //Aqui capturamos los datos ingresados por el usuario
     const body = new URLSearchParams();
     body.append('name', name.value);
     body.append('email', email.value);
     body.append('password', password.value);
     body.append('c_password', c_password.value);
 
+    //Aqui hacemos el envio a la api
     const response = await fetch('https://api.takeit.ciph3r.co/api/v1/register', {
       method: 'POST',
       headers: {
@@ -30,12 +32,14 @@ const handleLogin = async () => {
 
     const data = await response.json();
 
+    //Verificamos que la repuesta de la api sea exitosa
     if (!response.ok) {
       throw new Error(data.message || 'Error en el registro');
     }
 
     const { token, name: nameRes, user } = data.data;
 
+    //Actualizamos el Store del usuario
     userStore.setUser({
       id: user.uuid,
       name: nameRes,
@@ -101,6 +105,4 @@ const handleLogin = async () => {
   </div>
 </template>
 
-<style scoped>
-/* Aquí puedes agregar tu estilo */
-</style>
+<style scoped></style>

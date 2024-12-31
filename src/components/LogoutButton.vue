@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-// LogoutButton.vue (ejemplo)
 import { useUserStore } from '../stores/userStore';
 import { useRouter } from 'vue-router';
 
