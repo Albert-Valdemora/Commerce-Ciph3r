@@ -12,5 +12,7 @@ const handleLogout = () => {
 </script>
 
 <template>
-  <button @click="handleLogout">Logout</button>
+  <button class="absolute right-4 bg-red-500 px-3 py-2 rounded-md text-white" @click="handleLogout">
+    Logout
+  </button>
 </template>
