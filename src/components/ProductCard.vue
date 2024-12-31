@@ -23,11 +23,7 @@ defineProps<{ product: Product }>();
     class="w-[300px] bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-lg"
   >
     <img
-      :src="
-        product.image == undefined
-          ? 'https://api.takeit.ciph3r.co/img/placepic.jpg'
-          : `${product.image.url}`
-      "
+      :src="product.image?.url || 'https://api.takeit.ciph3r.co/img/placepic.jpg'"
       :alt="product.name"
       class="w-full h-48 object-cover"
     />
